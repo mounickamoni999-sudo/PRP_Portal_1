@@ -54,72 +54,80 @@ const footerGroups = [
 ];
 
 const LandingPage = () => {
+  const handleSectionScroll = (event, sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      event.preventDefault();
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <header className="Landing-Page-headerBar">
-        <a href="#home" className="Landing-Page-headerLogoLink">
+      <header className="Prp-Landing-Page-headerBar">
+        <Link to="#home" onClick={(event) => handleSectionScroll(event, "home")} className="Prp-Landing-Page-headerLogoLink">
           <img src={Logo} alt="Placement and Recruitment Platform logo" />
-          <span>Placement &;<br />Recruitment Platform</span>
-        </a>
-        <nav className="Landing-Page-headerMenu">
-          <a href="#home" className="Landing-Page-headerMenuItem active">Home</a>
-          <a href="#features" className="Landing-Page-headerMenuItem">Features</a>
-          <a href="#recruiters" className="Landing-Page-headerMenuItem">For Recruiters/Employers</a>
-          <a href="#training" className="Landing-Page-headerMenuItem">For Training Institutions</a>
-          <a href="#success-stories" className="Landing-Page-headerMenuItem">Success Stories</a>
+          <span>Placement &; <br />Recruitment Platform</span>
+        </Link>
+        <nav className="Prp-Landing-Page-headerMenu">
+          <Link to="#home" onClick={(event) => handleSectionScroll(event, "home")} className="Prp-Landing-Page-headerMenuItem Prp-Landing-Page-active">Home</Link>
+          <Link to="#features" onClick={(event) => handleSectionScroll(event, "features")} className="Prp-Landing-Page-headerMenuItem">Features</Link>
+          <Link to="#recruiters" onClick={(event) => handleSectionScroll(event, "recruiters")} className="Prp-Landing-Page-headerMenuItem">For Recruiters/Employers</Link>
+          <Link to="#training" onClick={(event) => handleSectionScroll(event, "training")} className="Prp-Landing-Page-headerMenuItem">For Training Institutions</Link>
+          <Link to="#success-stories" onClick={(event) => handleSectionScroll(event, "success-stories")} className="Prp-Landing-Page-headerMenuItem">Success Stories</Link>
         </nav>
-        <div className="Landing-Page-headerAuthButtons">
-          <Link to="/login" className="Landing-Page-headerBtnLogin">Login</Link>
-          <Link to="/po-registration" className="Landing-Page-headerBtnRegister">Register</Link>
+        <div className="Prp-Landing-Page-headerAuthButtons">
+          <Link to="/login" className="Prp-Landing-Page-headerBtnLogin">Login</Link>
+          <Link to="/po-registration" className="Prp-Landing-Page-headerBtnRegister">Register</Link>
         </div>
       </header>
-      <main className="Landing-Page-wrapper">
-        <section className="Landing-Page-banner" id="home">
-          <div className="Landing-Page-bannerText">
-            <p className="Landing-Page-smallTitle">BUILD YOUR FUTURE</p>
+      <main className="Prp-Landing-Page-wrapper">
+        <section className="Prp-Landing-Page-banner" id="home">
+          <div className="Prp-Landing-Page-bannerText">
+            <p className="Prp-Landing-Page-smallTitle">BUILD YOUR FUTURE</p>
             <h1>Connect. Learn.<br />Get Placed.</h1>
-            <p className="Landing-Page-bannerPara">The all-in-one platform that bridges the gap between talented individuals, top employers and training institutions.</p>
-            <div className="Landing-Page-bannerButtons">
-              <Link to="/po-registration" className="Landing-Page-btnDark">Get Started</Link>
-              <a href="#features" className="Landing-Page-btnLight">Explore Jobs</a>
+            <p className="Prp-Landing-Page-bannerPara">The all-in-one platform that bridges the gap between talented individuals, top employers and training institutions.</p>
+            <div className="Prp-Landing-Page-bannerButtons">
+              <Link to="/po-registration" className="Prp-Landing-Page-btnDark">Get Started</Link>
+              <Link to="#features" onClick={(event) => handleSectionScroll(event, "features")} className="Prp-Landing-Page-btnLight">Explore Jobs</Link>
             </div>
           </div>
-          <div className="Landing-Page-bannerPicture">
+          <div className="Prp-Landing-Page-bannerPicture">
             <img src={bannerIllustration} alt="People collaborating on recruitment and career planning" />
           </div>
         </section>
-        <section className="Landing-Page-whySection" id="features">
-          <div className="Landing-Page-titleBox">
-            <p className="Landing-Page-smallTitle">WHY CHOOSE US</p>
+        <section className="Prp-Landing-Page-whySection" id="features">
+          <div className="Prp-Landing-Page-titleBox">
+            <p className="Prp-Landing-Page-smallTitle">WHY CHOOSE US</p>
             <h2>Everything You Need for a Successful Career</h2>
           </div>
-          <div className="Landing-Page-whyCards">
+          <div className="Prp-Landing-Page-whyCards">
             {whyItems.map((item) => (
-              <article className="Landing-Page-whyCard" key={item.title}>
-                <div className="Landing-Page-whyIconCircle">
+              <div className="Prp-Landing-Page-whyCard" key={item.title}>
+                <div className="Prp-Landing-Page-whyIconCircle">
                   <img src={item.icon} alt={item.title} />
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-              </article>
+              </div>
             ))}
           </div>
         </section>
-        <section className="Landing-Page-storiesSection" id="success-stories">
-          <div className="Landing-Page-titleBox">
-            <p className="Landing-Page-smallTitle">SUCCESS STORIES</p>
+        <section className="Prp-Landing-Page-storiesSection" id="success-stories">
+          <div className="Prp-Landing-Page-titleBox">
+            <p className="Prp-Landing-Page-smallTitle">SUCCESS STORIES</p>
             <h2>WHAT OUR USERS SAY</h2>
           </div>
-          <div className="Landing-Page-storyCards">
+          <div className="Prp-Landing-Page-storyCards">
             {storyList.map((story) => (
-              <article className="Landing-Page-storyCard" key={story.name}>
-                <img className="Landing-Page-quoteMark" src={QuoteIcon} alt="" />
-                <div className="Landing-Page-storyTop">
-                  <div className="Landing-Page-avatarBox">
+              <div className="Prp-Landing-Page-storyCard" key={story.name}>
+                <img className="Prp-Landing-Page-quoteMark" src={QuoteIcon} alt="" />
+                <div className="Prp-Landing-Page-storyTop">
+                  <div className="Prp-Landing-Page-avatarBox">
                     <img src={ProfileIcon} alt="User profile" />
                   </div>
-                  <div className="Landing-Page-storyPerson">
-                    <div className="Landing-Page-ratingStars" aria-label="5 out of 5 stars">
+                  <div className="Prp-Landing-Page-storyPerson">
+                    <div className="Prp-Landing-Page-ratingStars" aria-label="5 out of 5 stars">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <img src={StarIcon} alt="" key={star} />
                       ))}
@@ -128,42 +136,42 @@ const LandingPage = () => {
                     <p>{story.role}</p>
                   </div>
                 </div>
-                <p className="Landing-Page-storyText">{story.message}</p>
-              </article>
+                <p className="Prp-Landing-Page-storyText">{story.message}</p>
+              </div>
             ))}
           </div>
         </section>
-        <section className="Landing-Page-partnersSection" id="recruiters">
-          <div className="Landing-Page-titleBox">
-            <p className="Landing-Page-smallTitle">TRUSTED BY LEADING COMPANIES</p>
+        <section className="Prp-Landing-Page-partnersSection" id="recruiters">
+          <div className="Prp-Landing-Page-titleBox">
+            <p className="Prp-Landing-Page-smallTitle">TRUSTED BY LEADING COMPANIES</p>
             <h2>TOP COMPANIES HIRE HERE</h2>
           </div>
-          <div className="Landing-Page-partnerRow">
+          <div className="Prp-Landing-Page-partnerRow">
             {partnerList.map((partner) => (
-              <div className="Landing-Page-partnerLogo" key={partner.name}>
+              <div className="Prp-Landing-Page-partnerLogo" key={partner.name}>
                 <img src={partner.logo} alt={partner.name} />
               </div>
             ))}
           </div>
         </section>
       </main>
-      <footer className="Landing-Page-footerWrapper">
-        <div className="Landing-Page-footerLinkGroups">
+      <footer className="Prp-Landing-Page-footerWrapper">
+        <div className="Prp-Landing-Page-footerLinkGroups">
           {footerGroups.map((group) => (
-            <div className="Landing-Page-footerLinkGroup" key={group.title}>
+            <div className="Prp-Landing-Page-footerLinkGroup" key={group.title}>
               <h3>{group.title}</h3>
               {group.links.map((link) => (
-                <a href={link.href} key={link.label}>{link.label}</a>
+                <Link to={link.href} onClick={(event) => handleSectionScroll(event, link.href.slice(1))} key={link.label}>{link.label}</Link>
               ))}
             </div>
           ))}
         </div>
-        <div className="Landing-Page-footerCopyRow">
+        <div className="Prp-Landing-Page-footerCopyRow">
           <p>© 2026 Placement and Recruitment Platform.</p>
-          <div className="Landing-Page-footerSocialRow">
-            <a href="https://www.facebook.com/" aria-label="Facebook"><img src={FacebookIcon} alt="Facebook" /></a>
-            <a href="https://x.com/" aria-label="X"><img src={XIcon} alt="X" /></a>
-            <a href="https://www.instagram.com/" aria-label="Instagram"><img src={InstagramIcon} alt="Instagram" /></a>
+          <div className="Prp-Landing-Page-footerSocialRow">
+            <Link to="https://www.facebook.com/" aria-label="Facebook"><img src={FacebookIcon} alt="Facebook" /></Link>
+            <Link to="https://x.com/" aria-label="X"><img src={XIcon} alt="X" /></Link>
+            <Link to="https://www.instagram.com/" aria-label="Instagram"><img src={InstagramIcon} alt="Instagram" /></Link>
           </div>
         </div>
       </footer>
