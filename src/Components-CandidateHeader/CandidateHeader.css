@@ -1,28 +1,33 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap'); */
 
 .Prp-Candidate-Header-container {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  gap: 24px;
   width: 100%;
   max-width: 1755px;
   height: 100px;
-  padding-right: 20px;
-  font-family: 'Noto Sans', 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-family: 'Noto Sans', 'Open Sans', Arial, sans-serif;
+  /* -webkit-font-smoothing: antialiased; */
 }
 
 .Prp-Candidate-Header-brand {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  gap: 14px;
+  flex: 0 1 622px;
+  min-width: max-content;
+  padding-right: 24px;
 }
 
 .Prp-Candidate-Header-logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
   background: #132a56;
@@ -31,6 +36,7 @@
 }
 
 .Prp-Candidate-Header-logoIcon {
+  display: block;
   width: 24px;
   height: 24px;
 }
@@ -44,6 +50,7 @@
 
 .Prp-Candidate-Header-title {
   margin: 0;
+  font-family: inherit;
   font-size: 20px;
   font-weight: 700;
   line-height: 27px;
@@ -56,6 +63,7 @@
   align-items: center;
   gap: 5px;
   margin: 0;
+  font-family: inherit;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -67,18 +75,18 @@
   content: '•';
   margin-right: 5px;
 }
-  
+
 .Prp-Candidate-Header-search {
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  flex: 1 1 800px;
-  min-width: 0;
-  max-width: 800px;
+  flex: 0 1 800px;
+  min-width: 240px;
   height: 40px;
-  margin: 0 auto;              
+  margin: 0;
+  padding: 0 12px;
   background: #ffffff;
   border: 1px solid rgba(19, 42, 86, 0.3);
   border-radius: 10px;
@@ -86,24 +94,34 @@
 }
 
 .Prp-Candidate-Header-searchIcon {
+  display: block;
   width: 24px;
   height: 24px;
   flex-shrink: 0;
 }
 
 .Prp-Candidate-Header-searchInput {
-  width: 183px;
+  box-sizing: border-box;
+  width: 190px;
   min-width: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   border: none;
   outline: none;
   background: transparent;
   font-family: inherit;
   font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
   color: #000000;
 }
 
 .Prp-Candidate-Header-searchInput::placeholder {
+  font-family: inherit;
+  font-size: 14px;
   color: #7f7f7f;
+  opacity: 1;
 }
 
 .Prp-Candidate-Header-search:focus-within {
@@ -121,15 +139,19 @@
   align-items: center;
   gap: 20px;
   flex-shrink: 0;
+  margin-left: auto;
+  padding-left: 24px;
 }
 
 .Prp-Candidate-Header-actionIcon {
+  display: block;
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
 
 .Prp-Candidate-Header-avatar {
+  display: block;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -137,7 +159,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1023px) {
   .Prp-Candidate-Header-title {
     font-size: 16px;
     line-height: 22px;
@@ -154,6 +176,10 @@
     gap: 12px;
     padding: 12px 16px;
   }
+  .Prp-Candidate-Header-brand {
+    flex: 1 1 auto;
+    padding-right: 0;
+  }
   .Prp-Candidate-Header-title {
     font-size: 14px;
     line-height: 20px;
@@ -162,11 +188,9 @@
   .Prp-Candidate-Header-search {
     order: 3;
     flex: 1 1 100%;
-    max-width: none;
-    margin: 0;
   }
   .Prp-Candidate-Header-actions {
-    margin-left: auto;
+    padding-left: 0;
   }
   .Prp-Candidate-Header-actionIcon,
   .Prp-Candidate-Header-avatar {

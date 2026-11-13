@@ -7,14 +7,16 @@ import GoodMorningCard from '../Components-GoodMorningCard/GoodMorningCard'
 const CandidateDashboard = () => {
   return (
     <div className="Prp-Candidate-Dashboard-container">
-      <CandidateHeader />
+      <div className="Prp-Candidate-Dashboard-page">
+        <CandidateHeader />
 
-      <div className="Prp-Candidate-Dashboard-body">
-        <CandidateSidebar />
+        <div className="Prp-Candidate-Dashboard-body">
+          <CandidateSidebar />
 
-        <main className="Prp-Candidate-Dashboard-main">
-          <GoodMorningCard />
-        </main>
+          <main className="Prp-Candidate-Dashboard-main">
+            <GoodMorningCard />
+          </main>
+        </div>
       </div>
     </div>
   )
