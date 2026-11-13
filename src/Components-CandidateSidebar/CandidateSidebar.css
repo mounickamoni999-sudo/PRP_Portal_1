@@ -1,0 +1,58 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap'); */
+
+.Prp-Candidate-Sidebar-container {
+  width: 250px;
+  flex-shrink: 0;
+  font-family: 'Noto Sans', 'Open Sans', sans-serif;
+}
+
+.Prp-Candidate-Sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Prp-Candidate-Sidebar-item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 50px;
+  padding: 0 20px;
+  background: #ffffff;
+  border: 1px solid #132a56;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Prp-Candidate-Sidebar-label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000000;
+}
+
+.Prp-Candidate-Sidebar-downArrow  {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 900px) {
+  .Prp-Candidate-Sidebar-container {
+    width: 100%;
+  }
+  .Prp-Candidate-Sidebar-list {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .Prp-Candidate-Sidebar-item {
+    width: auto;
+    min-width: 180px;
+    flex-shrink: 0;
+  }
+}

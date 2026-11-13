@@ -9,6 +9,7 @@ import ResetPassword from "./ResetPassword/ResetPassword";
 import SuccessfulPage from "./SuccessfulPage/SuccessfulPage";
 import PoRegistration from "./Components-PoRegistration/PoRegistration";
 import GoodMorningCard from "./Components-GoodMorningCard/GoodMorningCard";
+import CandidateDashboard from "./Components-CandidateDashboard/CandidateDashboard";
 
 const App = () => {
   return (
@@ -21,10 +22,10 @@ const App = () => {
       <Route path="/success" element={<SuccessfulPage />} />
       <Route path="/po-registration" element={<PoRegistration />} />
       <Route path="/good-morning-card" element={<GoodMorningCard />} />
+      <Route path="/candidate-dashboard" element={<CandidateDashboard />} />
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }
 
 export default App;
-
