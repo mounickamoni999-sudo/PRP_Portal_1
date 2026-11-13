@@ -109,7 +109,7 @@ const PoRegistration = () => {
           <img src={poPlacement} alt="Placement platform logo" className="Prp-Po-Registration-Brand-Logo" />
           <div className="Prp-Po-Registration-Brand-Text">
             <h2>AI Education &; Workforce Development Platform</h2>
-            {/* <p>Connect • Discover • Succeed</p> */}            
+            {/* <p>Connect • Discover • Succeed</p> */}          
             <p className="Prp-Po-Registration-Brand-Tagline">  <span className="Prp-Po-Registration-Brand-Tagline-Item">Connect</span>  <span className="Prp-Po-Registration-Brand-Tagline-Item">Discover</span>  <span className="Prp-Po-Registration-Brand-Tagline-Item">Succeed</span></p>
           </div>
         </header>

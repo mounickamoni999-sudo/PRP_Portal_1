@@ -158,6 +158,7 @@ const CommonLoginScreen = () => {
                         <span>Google</span>
                     </button>
                     <p className="Common-Login-Create-Account">Don't have an account?<button type="button">Create Account</button></p>
+                    {/* <p className="Common-Login-Create-Account">Don't have an account?<button type="button" onClick={() => navigate('/po-registration')}>Create Account</button></p> */}
                     <div className="Common-Login-Footer-Links">
                         <a href="#help">Help</a>
                         <img className="Common-Login-Footer-Dot" src={DotIcon} alt="" />

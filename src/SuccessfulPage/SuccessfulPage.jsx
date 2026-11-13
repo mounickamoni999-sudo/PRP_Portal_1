@@ -15,7 +15,7 @@ import successMark from "../assets/SuccessfulPage/success-confirmation-icon.png"
     navigate("/login");
   };
 
- return (
+ return ( 
      <main className="SuccessfulPage-reset-page">
        <section className="SuccessfulPage-reset-page-story">
          <header className="SuccessfulPage-brand">
