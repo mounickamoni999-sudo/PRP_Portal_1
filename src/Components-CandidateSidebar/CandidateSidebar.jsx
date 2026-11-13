@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "./CandidateSidebar.css";
 import sidebarDownArrowIcon from "../assets/Candidate dashboard/Sidebar downarrow.png";
 
